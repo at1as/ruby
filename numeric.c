@@ -5035,6 +5035,7 @@ Init_Numeric(void)
 
     rb_define_method(rb_cNumeric, "floor", num_floor, -1);
     rb_define_method(rb_cNumeric, "ceil", num_ceil, -1);
+    rb_define_alias(rb_cNumeric, "ceiling", "ceil");
     rb_define_method(rb_cNumeric, "round", num_round, -1);
     rb_define_method(rb_cNumeric, "truncate", num_truncate, -1);
     rb_define_method(rb_cNumeric, "step", num_step, -1);
@@ -5063,6 +5064,7 @@ Init_Numeric(void)
     rb_define_method(rb_cInteger, "to_f", int_to_f, 0);
     rb_define_method(rb_cInteger, "floor", int_floor, -1);
     rb_define_method(rb_cInteger, "ceil", int_ceil, -1);
+    rb_define_alias(rb_cInteger, "ceiling", "ceil");
     rb_define_method(rb_cInteger, "truncate", int_truncate, -1);
     rb_define_method(rb_cInteger, "round", int_round, -1);
     rb_define_method(rb_cInteger, "<=>", int_cmp, 1);
@@ -5240,6 +5242,7 @@ Init_Numeric(void)
     rb_define_method(rb_cFloat, "to_int", flo_to_i, 0);
     rb_define_method(rb_cFloat, "floor", flo_floor, -1);
     rb_define_method(rb_cFloat, "ceil", flo_ceil, -1);
+    rb_define_alias(rb_cFloat, "ceiling", "ceil");
     rb_define_method(rb_cFloat, "round", flo_round, -1);
     rb_define_method(rb_cFloat, "truncate", flo_truncate, -1);
 

@@ -3312,6 +3312,7 @@ Init_bigdecimal(void)
     rb_define_method(rb_cBigDecimal, "frac", BigDecimal_frac, 0);
     rb_define_method(rb_cBigDecimal, "floor", BigDecimal_floor, -1);
     rb_define_method(rb_cBigDecimal, "ceil", BigDecimal_ceil, -1);
+    rb_define_alias(rb_cBigDecimal, "ceiling", "ceil");
     rb_define_method(rb_cBigDecimal, "power", BigDecimal_power, -1);
     rb_define_method(rb_cBigDecimal, "**", BigDecimal_power_op, 1);
     rb_define_method(rb_cBigDecimal, "<=>", BigDecimal_comp, 1);
