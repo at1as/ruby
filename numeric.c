@@ -1805,7 +1805,8 @@ flo_floor(int argc, VALUE *argv, VALUE num)
 
 /*
  *  call-seq:
- *     float.ceil([ndigits])  ->  integer or float
+ *     float.ceil([ndigits])    ->  integer or float
+ *     float.ceiling([ndigits]) ->  integer or float
  *
  *  Returns the smallest number greater than or equal to +float+ in decimal
  *  digits (default 0 digits).
@@ -1831,6 +1832,8 @@ flo_floor(int argc, VALUE *argv, VALUE num)
  *     34567.89.ceil(1)  #=> 34567.9
  *     34567.89.ceil(2)  #=> 34567.89
  *     34567.89.ceil(3)  #=> 34567.89
+ *
+ *  Float#ceiling is an alias of Float#ceil.
  */
 
 static VALUE
@@ -2173,7 +2176,8 @@ num_floor(int argc, VALUE *argv, VALUE num)
 
 /*
  *  call-seq:
- *     num.ceil([ndigits])  ->  integer or float
+ *     num.ceil([ndigits])    ->  integer or float
+ *     num.ceiling([ndigits]) ->  integer or float
  *
  *  Returns the smallest possible Integer that is greater than or equal to
  *  +num+.
@@ -2185,6 +2189,8 @@ num_floor(int argc, VALUE *argv, VALUE num)
  *     1.2.ceil      #=> 2
  *     (-1.2).ceil   #=> -1
  *     (-1.0).ceil   #=> -1
+ *
+ *  Numeric#ceiling is an alias of Numeric#ceil.
  */
 
 static VALUE
@@ -4831,7 +4837,8 @@ int_floor(int argc, VALUE* argv, VALUE num)
 /*
  *  Document-method: Integer#ceil
  *  call-seq:
- *     int.ceil([ndigits])  ->  integer or float
+ *     int.ceil([ndigits])    ->  integer or float
+ *     int.ceiling([ndigits]) ->  integer or float
  *
  *  Returns the smallest number than or equal to +int+ in decimal
  *  digits (default 0 digits).
@@ -4842,6 +4849,8 @@ int_floor(int argc, VALUE* argv, VALUE num)
  *     1.ceil        #=> 1
  *     1.ceil(2)     #=> 1.0
  *     15.ceil(-1)   #=> 20
+ *
+ *  Integer#ceiling is an alias of Integer#ceil.
  */
 
 static VALUE
